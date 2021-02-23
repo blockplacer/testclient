@@ -352,12 +352,13 @@ namespace Waaa
 			GL.EnableVertexAttribArray(normalLocation);
 			GL.VertexAttribPointer(normalLocation, 3, VertexAttribPointerType.Float, false, 0 * sizeof(float), 0 * sizeof(float));
 			/*GL.BindBuffer(BufferTarget.ArrayBuffer,recttex);//vbo_1
-			GL.BufferData(BufferTarget.ArrayBuffer,texCoords_1.Count * Vector2.SizeInBytes,texCoords_1.ToArray(), BufferUsageHint.StaticDraw);
-			GL.BindBuffer(BufferTarget.ArrayBuffer,recttex );//vbo_1*/
-			//GL.VertexAttribPointer(2, 2, VertexAttribPointerType.Float, false, 2 * sizeof(float), 0);
-			var texLocation = reflectsky_shader.GetAttribLocation("tex");//Coord
+			GL.BufferData(BufferTarget.ArrayBuffer,texCoords_1.Count * Vector2.SizeInBytes,texCoords_1.ToArray(), BufferUsageHint.StaticDraw);*/
+			//GL.BindBuffer(BufferTarget.ArrayBuffer,recttex);/*//vbo_1*/
+            
+            var texLocation = reflectsky_shader.GetAttribLocation("tex");//Coord
 			GL.EnableVertexAttribArray(texLocation);
-			GL.VertexAttribPointer(texLocation, 2, VertexAttribPointerType.Float, false, 2 * sizeof(float), 0 );/**/
+            GL.VertexAttribPointer(2, 2, VertexAttribPointerType.Float, false, 3 * sizeof(float), 1 * sizeof(float));
+            //GL.VertexAttribPointer(texLocation, 2, VertexAttribPointerType.Float, false, 0 * sizeof(float), 0 * sizeof(float));/**/
 			/*GL.BindBuffer(BufferTarget.ArrayBuffer, vbo___1);
 			GL.VertexAttribPointer(3, 3, VertexAttribPointerType.Float, false,3 * sizeof(float), 3 * sizeof(float));*/
 
